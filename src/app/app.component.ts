@@ -7,7 +7,6 @@ import { LocalStorageService } from './local-storage.service';
     selector: 'app-root',
     imports: [RouterOutlet],
     templateUrl: './app.component.html',
-    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {

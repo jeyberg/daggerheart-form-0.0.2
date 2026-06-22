@@ -68,7 +68,6 @@ import { JsonPipe } from '@angular/common';
       {{ characterCreationModel() | json }}
     </p>
   `,
-  changeDetection: ChangeDetectionStrategy.Eager,
   styles: `
     input, select {
       border: 1px solid;
