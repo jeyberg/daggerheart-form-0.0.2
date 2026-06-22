@@ -1,4 +1,4 @@
-import { Injectable, signal } from "@angular/core";
+import { Service, signal } from "@angular/core";
 
 export interface CharacterModel {
     name?: string;
@@ -17,7 +17,7 @@ export interface CharacterModel {
     inventory?: string[];
 }
 
-@Injectable({ providedIn: 'root' })
+@Service()
 export class CharacterService {
 
     private readonly characterModel = signal<CharacterModel | undefined>(undefined);

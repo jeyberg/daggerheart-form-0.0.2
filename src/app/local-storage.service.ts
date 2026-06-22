@@ -1,4 +1,4 @@
-import { Injectable, Signal, signal } from "@angular/core";
+import { Service, Signal, signal } from "@angular/core";
 
 export interface CharacterData {
     name?: string;
@@ -27,9 +27,7 @@ export interface CharacterData {
     maxHope?: number;
 }
 
-@Injectable({
-    providedIn: 'root'
-})
+@Service()
 export class LocalStorageService {
     private storageKey = 'dhc-char-data';
     private characterSignal = signal<CharacterData | undefined>(undefined);
