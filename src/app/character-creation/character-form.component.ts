@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
 import { JsonPipe } from '@angular/common';
 
@@ -68,6 +68,7 @@ import { JsonPipe } from '@angular/common';
       {{ characterCreationModel() | json }}
     </p>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: `
     input, select {
       border: 1px solid;
